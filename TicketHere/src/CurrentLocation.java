@@ -10,6 +10,7 @@ import java.awt.Frame;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
+import java.awt.Toolkit;
 
 public class CurrentLocation extends JFrame {
 
@@ -45,6 +46,7 @@ public class CurrentLocation extends JFrame {
 	 * Create the frame.
 	 */
 	public CurrentLocation() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\Icon.png"));
 		LocationName location = new LocationName();
 		CalculatePrice calp = new CalculatePrice();
 		setTitle("TicketHere");
@@ -55,37 +57,39 @@ public class CurrentLocation extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnExit = new JButton("Exit");
+		JButton btnExit = new JButton("\uD83D\uDDD9 Exit");
+		btnExit.setForeground(Color.WHITE);
+		btnExit.setBackground(Color.RED);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-		btnExit.setBounds(745, 11, 89, 23);
+		btnExit.setBounds(10, 284, 107, 64);
 		contentPane.add(btnExit);
 		
 		txtPleaseSelectYour = new JTextField();
 		txtPleaseSelectYour.setEditable(false);
-		txtPleaseSelectYour.setFont(new Font("Trebuchet MS", Font.BOLD, 20));
-		txtPleaseSelectYour.setText("Please select your current location");
+		txtPleaseSelectYour.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 24));
+		txtPleaseSelectYour.setText("\uD83D\uDCCD Please select your current location");
 		txtPleaseSelectYour.setOpaque(false);
 		txtPleaseSelectYour.setBorder(null);
-		txtPleaseSelectYour.setBounds(22, 11, 339, 49);
+		txtPleaseSelectYour.setBounds(10, 0, 439, 55);
 		contentPane.add(txtPleaseSelectYour);
 		txtPleaseSelectYour.setColumns(10);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(10, 54, 824, 216);
+		panel.setBounds(10, 57, 824, 216);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		txtYourCurrentLocation = new JTextField();
 		txtYourCurrentLocation.setText("");
 		txtYourCurrentLocation.setOpaque(false);
-		txtYourCurrentLocation.setFont(new Font("Trebuchet MS", Font.BOLD, 20));
+		txtYourCurrentLocation.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		txtYourCurrentLocation.setEditable(false);
 		txtYourCurrentLocation.setColumns(10);
 		txtYourCurrentLocation.setBorder(null);
-		txtYourCurrentLocation.setBounds(22, 309, 453, 49);
+		txtYourCurrentLocation.setBounds(131, 292, 453, 49);
 		contentPane.add(txtYourCurrentLocation);
 		btnPhayaThai = new JButton("(A8)Phaya Thai");
 		btnPhayaThai.addActionListener(new ActionListener() {
@@ -104,7 +108,7 @@ public class CurrentLocation extends JFrame {
 				txtYourCurrentLocation.setText("Your current location is (A" + calp.getLocation()+")"+ location.getLocationName());
 			}
 		});
-		btnPhayaThai.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnPhayaThai.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnPhayaThai.setBounds(0, 11, 201, 90);
 		panel.add(btnPhayaThai);
 		
@@ -125,7 +129,7 @@ public class CurrentLocation extends JFrame {
 				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
-		btnRatchaprarop.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnRatchaprarop.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnRatchaprarop.setBounds(205, 11, 201, 90);
 		panel.add(btnRatchaprarop);
 		
@@ -146,7 +150,7 @@ public class CurrentLocation extends JFrame {
 				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
-		btnMakkasan.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnMakkasan.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnMakkasan.setBounds(416, 11, 201, 90);
 		panel.add(btnMakkasan);
 		
@@ -167,7 +171,7 @@ public class CurrentLocation extends JFrame {
 				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
-		btnRamkhamhaeng.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnRamkhamhaeng.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnRamkhamhaeng.setBounds(621, 11, 201, 90);
 		panel.add(btnRamkhamhaeng);
 		
@@ -188,7 +192,7 @@ public class CurrentLocation extends JFrame {
 				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
-		btnHuaMak.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnHuaMak.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnHuaMak.setBounds(0, 112, 201, 90);
 		panel.add(btnHuaMak);
 		
@@ -209,7 +213,7 @@ public class CurrentLocation extends JFrame {
 				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
-		btnBanThapChang.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnBanThapChang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnBanThapChang.setBounds(205, 112, 201, 90);
 		panel.add(btnBanThapChang);
 		
@@ -230,7 +234,7 @@ public class CurrentLocation extends JFrame {
 				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
-		btnLatKbabang.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnLatKbabang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnLatKbabang.setBounds(416, 112, 201, 90);
 		panel.add(btnLatKbabang);
 		
@@ -251,11 +255,12 @@ public class CurrentLocation extends JFrame {
 				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
-		btnSuvarnabhumi.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnSuvarnabhumi.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnSuvarnabhumi.setBounds(621, 112, 201, 90);
 		panel.add(btnSuvarnabhumi);
 		
-		btnNext = new JButton("Next");
+		btnNext = new JButton("Next \u25B6");
+		btnNext.setBackground(new Color(0, 255, 0));
 		btnNext.setEnabled(false);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -264,7 +269,7 @@ public class CurrentLocation extends JFrame {
 				destination.setVisible(true);
 			}
 		});
-		btnNext.setBounds(745, 325, 89, 23);
+		btnNext.setBounds(727, 284, 107, 64);
 		contentPane.add(btnNext);
 	}
 	protected JButton getBtnPhayaThai() {

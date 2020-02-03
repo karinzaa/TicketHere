@@ -42,7 +42,7 @@ public class StartUp {
 	 */
 	private void initialize() {
 		frmTickethere = new JFrame();
-		frmTickethere.setIconImage(Toolkit.getDefaultToolkit().getImage(StartUp.class.getResource("/javax/swing/plaf/basic/icons/JavaCup16.png")));
+		frmTickethere.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\Icon.png"));
 		frmTickethere.setTitle("TicketHere");
 		frmTickethere.setBounds(100, 100, 640, 350);
 		frmTickethere.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -50,16 +50,17 @@ public class StartUp {
 		
 		txtTickethere = new JTextField();
 		txtTickethere.setEditable(false);
-		txtTickethere.setFont(new Font("Trebuchet MS", Font.BOLD, 36));
+		txtTickethere.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 36));
 		txtTickethere.setHorizontalAlignment(SwingConstants.CENTER);
 		txtTickethere.setOpaque(false);
 		txtTickethere.setBorder(null);
-		txtTickethere.setText("TicketHere");
-		txtTickethere.setBounds(209, 11, 205, 60);
+		txtTickethere.setText("🎫 TicketHere");
+		txtTickethere.setBounds(167, 64, 275, 60);
 		frmTickethere.getContentPane().add(txtTickethere);
 		txtTickethere.setColumns(10);
 		
-		JButton btnStart = new JButton("Start");
+		JButton btnStart = new JButton("▶ Start");
+		btnStart.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				frmTickethere.dispose();
@@ -67,8 +68,7 @@ public class StartUp {
 				current.setVisible(true);
 			}
 		});
-		btnStart.setFont(new Font("Trebuchet MS", Font.BOLD, 38));
-		btnStart.setBounds(189, 115, 255, 55);
+		btnStart.setBounds(167, 145, 282, 71);
 		frmTickethere.getContentPane().add(btnStart);
 	}
 }

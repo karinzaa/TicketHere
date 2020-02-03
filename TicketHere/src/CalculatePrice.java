@@ -15,14 +15,14 @@ public class CalculatePrice {
 	}
 	public int getPrice() {
 		if(location < destination) {
-			price = 12;
+			price = 14;
 			for(int i = location + 1; i < destination;i++ ) {
 				price += 1;
 			}
 			return price;
 		}
 		if(location > destination){
-			price = 12;
+			price = 14;
 			for(int i = location - 1; i > destination;i--) {
 				price += 1;
 			}

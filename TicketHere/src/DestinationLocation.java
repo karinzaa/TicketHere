@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Font;
+import java.awt.Toolkit;
 
 public class DestinationLocation extends CurrentLocation {
 
@@ -46,6 +47,7 @@ public class DestinationLocation extends CurrentLocation {
 	 * Create the frame.
 	 */
 	public DestinationLocation() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\Icon.png"));
 		setTitle("TicketHere");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 860, 430);
@@ -54,40 +56,41 @@ public class DestinationLocation extends CurrentLocation {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnExit = new JButton("Exit");
+		JButton btnExit = new JButton("\uD83D\uDDD9 Exit");
+		btnExit.setBackground(Color.RED);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-		btnExit.setBounds(745, 12, 89, 23);
+		btnExit.setBounds(10, 284, 107, 64);
 		contentPane.add(btnExit);
 		
 		LocationName location = new LocationName();
 		CalculatePrice calp = new CalculatePrice();
 		txtPleaseSelectYour = new JTextField();
-		txtPleaseSelectYour.setText("Please select your destination");
+		txtPleaseSelectYour.setText("\uD83D\uDE89 Please select your destination");
 		txtPleaseSelectYour.setOpaque(false);
-		txtPleaseSelectYour.setFont(new Font("Trebuchet MS", Font.BOLD, 20));
+		txtPleaseSelectYour.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 24));
 		txtPleaseSelectYour.setEditable(false);
 		txtPleaseSelectYour.setColumns(10);
 		txtPleaseSelectYour.setBorder(null);
-		txtPleaseSelectYour.setBounds(10, 12, 339, 49);
+		txtPleaseSelectYour.setBounds(10, 0, 367, 56);
 		contentPane.add(txtPleaseSelectYour);
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
-		panel.setBounds(10, 54, 824, 216);
+		panel.setBounds(10, 56, 824, 216);
 		contentPane.add(panel);
 		
 		txtYourDestinationIs = new JTextField();
 		txtYourDestinationIs.setText("");
 		txtYourDestinationIs.setOpaque(false);
-		txtYourDestinationIs.setFont(new Font("Trebuchet MS", Font.BOLD, 20));
+		txtYourDestinationIs.setFont(new Font("Segoe UI", Font.PLAIN, 20));
 		txtYourDestinationIs.setEditable(false);
 		txtYourDestinationIs.setColumns(10);
 		txtYourDestinationIs.setBorder(null);
-		txtYourDestinationIs.setBounds(22, 309, 404, 49);
+		txtYourDestinationIs.setBounds(134, 293, 404, 49);
 		contentPane.add(txtYourDestinationIs);
 		
 		btnPhayathai = new JButton("(A8)Phaya Thai");
@@ -107,7 +110,7 @@ public class DestinationLocation extends CurrentLocation {
 				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")"+ location.getDestinationName());
 			}
 		});
-		btnPhayathai.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnPhayathai.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnPhayathai.setBounds(0, 11, 201, 90);
 		panel.add(btnPhayathai);
 		
@@ -128,7 +131,7 @@ public class DestinationLocation extends CurrentLocation {
 				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
-		btnRatchaprarop.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnRatchaprarop.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnRatchaprarop.setBounds(205, 11, 201, 90);
 		panel.add(btnRatchaprarop);
 		
@@ -149,7 +152,7 @@ public class DestinationLocation extends CurrentLocation {
 				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
-		btnMakkasan.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnMakkasan.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnMakkasan.setBounds(416, 11, 201, 90);
 		panel.add(btnMakkasan);
 		
@@ -170,7 +173,7 @@ public class DestinationLocation extends CurrentLocation {
 				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
-		btnRamkhamhaeng.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnRamkhamhaeng.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnRamkhamhaeng.setBounds(621, 11, 201, 90);
 		panel.add(btnRamkhamhaeng);
 		
@@ -191,7 +194,7 @@ public class DestinationLocation extends CurrentLocation {
 				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
-		btnHuaMak.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnHuaMak.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnHuaMak.setBounds(0, 112, 201, 90);
 		panel.add(btnHuaMak);
 		
@@ -212,7 +215,7 @@ public class DestinationLocation extends CurrentLocation {
 				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
-		btnBanThapChang.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnBanThapChang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnBanThapChang.setBounds(205, 112, 201, 90);
 		panel.add(btnBanThapChang);
 		
@@ -233,7 +236,7 @@ public class DestinationLocation extends CurrentLocation {
 				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
-		btnLatKbabang.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnLatKbabang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnLatKbabang.setBounds(416, 112, 201, 90);
 		panel.add(btnLatKbabang);
 		
@@ -254,13 +257,14 @@ public class DestinationLocation extends CurrentLocation {
 				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
-		btnSuvarnabhumi.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnSuvarnabhumi.setFont(new Font("Segoe UI", Font.PLAIN, 18));
 		btnSuvarnabhumi.setBounds(621, 112, 201, 90);
 		panel.add(btnSuvarnabhumi);
 		
 	
 		
-		btnNext = new JButton("Next");
+		btnNext = new JButton("Next \u25B6");
+		btnNext.setBackground(Color.GREEN);
 		btnNext.setEnabled(false);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -269,10 +273,11 @@ public class DestinationLocation extends CurrentLocation {
 				sumTicket.setVisible(true);
 			}
 		});
-		btnNext.setBounds(745, 325, 89, 23);	
+		btnNext.setBounds(727, 284, 107, 64);	
 		contentPane.add(btnNext);
 		
-		JButton btnBack = new JButton("Back");
+		JButton btnBack = new JButton("\u25C0 Back");
+		btnBack.setBackground(Color.ORANGE);
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CurrentLocation current = new CurrentLocation();
@@ -280,7 +285,7 @@ public class DestinationLocation extends CurrentLocation {
 				DestinationLocation.super.setVisible(false);
 			}
 		});
-		btnBack.setBounds(646, 325, 89, 23);
+		btnBack.setBounds(594, 284, 112, 64);
 		contentPane.add(btnBack);
 		if(location.getLocationName().equals("Phaya Thai")) {	
 			btnPhayathai.setEnabled(false);
