@@ -47,6 +47,7 @@ public class DestinationLocation extends CurrentLocation {
 	private JLabel label_16;
 	private JLabel label_17;
 	private JLabel label_18;
+	private JPanel panel_1;
 	
 	/**
 	 * Launch the application.
@@ -93,6 +94,7 @@ public class DestinationLocation extends CurrentLocation {
 		LocationName location = new LocationName();
 		CalculatePrice calp = new CalculatePrice();
 		txtPleaseSelectYour = new JTextField();
+		txtPleaseSelectYour.setForeground(new Color(255, 255, 255));
 		txtPleaseSelectYour.setText("\uD83D\uDE89 Please select your destination station.");
 		txtPleaseSelectYour.setOpaque(false);
 		txtPleaseSelectYour.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 40));
@@ -104,7 +106,7 @@ public class DestinationLocation extends CurrentLocation {
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
-		panel.setBounds(10, 148, 1164, 444);
+		panel.setBounds(10, 148, 1184, 444);
 		contentPane.add(panel);
 		
 		btnPhayathai = new JButton("(A8)");
@@ -281,13 +283,13 @@ public class DestinationLocation extends CurrentLocation {
 			}
 		});
 		btnSuvarnabhumi.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnSuvarnabhumi.setBounds(1019, 238, 103, 90);
+		btnSuvarnabhumi.setBounds(1048, 233, 103, 90);
 		panel.add(btnSuvarnabhumi);
 		
 		label = new JLabel("\uD83D\uDEE7Suvarnabhumi\r\n");
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		label.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
-		label.setBounds(971, 333, 172, 26);
+		label.setBounds(1012, 335, 172, 26);
 		panel.add(label);
 		
 		label_4 = new JLabel("Lat Kbabang");
@@ -389,19 +391,19 @@ public class DestinationLocation extends CurrentLocation {
 		label_2 = new JLabel(" \u256E");
 		label_2.setForeground(new Color(128, 0, 0));
 		label_2.setFont(new Font("Segoe UI Symbol", Font.BOLD, 73));
-		label_2.setBounds(1030, 112, 70, 72);
+		label_2.setBounds(1055, 112, 70, 72);
 		panel.add(label_2);
 		
 		label_3 = new JLabel("|");
 		label_3.setForeground(new Color(128, 0, 0));
 		label_3.setFont(new Font("Segoe UI Symbol", Font.BOLD, 70));
-		label_3.setBounds(1064, 168, 21, 76);
+		label_3.setBounds(1089, 168, 21, 76);
 		panel.add(label_3);
 		
-		label_1 = new JLabel("_____________________");
+		label_1 = new JLabel("______________________");
 		label_1.setForeground(new Color(128, 0, 0));
 		label_1.setFont(new Font("Tahoma", Font.BOLD, 72));
-		label_1.setBounds(101, 72, 979, 103);
+		label_1.setBounds(78, 72, 1045, 103);
 		panel.add(label_1);
 		
 		txtYourDestinationIs = new JTextField();
@@ -429,7 +431,7 @@ public class DestinationLocation extends CurrentLocation {
 				sumTicket.setVisible(true);
 			}
 		});
-		btnNext.setBounds(994, 613, 180, 105);	
+		btnNext.setBounds(1002, 613, 180, 105);	
 		contentPane.add(btnNext);
 		
 		JButton btnBack = new JButton("\u25C0 Back");
@@ -445,6 +447,11 @@ public class DestinationLocation extends CurrentLocation {
 		});
 		btnBack.setBounds(803, 614, 177, 104);
 		contentPane.add(btnBack);
+		
+		panel_1 = new JPanel();
+		panel_1.setBackground(new Color(128, 0, 0));
+		panel_1.setBounds(0, 21, 1194, 107);
+		contentPane.add(panel_1);
 		if(location.getLocationName().equals("Phaya Thai")) {	
 			btnPhayathai.setEnabled(false);
 		 }

@@ -28,6 +28,7 @@ public class SummitTicket extends JFrame {
 	private JTextField textField;
 	private JButton btnExit;
 	private JTextField textField_1;
+	private JPanel panel_2;
 
 	/**
 	 * Launch the application.
@@ -60,6 +61,7 @@ public class SummitTicket extends JFrame {
 		contentPane.setLayout(null);
 		
 		txtSummitTicket = new JTextField();
+		txtSummitTicket.setForeground(new Color(255, 255, 255));
 		txtSummitTicket.setText("🎫 Summit Ticket");
 		txtSummitTicket.setOpaque(false);
 		txtSummitTicket.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 40));
@@ -70,23 +72,23 @@ public class SummitTicket extends JFrame {
 		contentPane.add(txtSummitTicket);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(9, 122, 1164, 444);
+		panel.setBounds(9, 152, 1173, 442);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		LocationName location = new LocationName();
 		CalculatePrice calp = new CalculatePrice();
 		txtYourLocation = new JTextField();
-		txtYourLocation.setText(" 📍  Your location        : (A"+ calp.getLocation() +")" + location.getLocationName());
+		txtYourLocation.setText(" 📍  Your board station is           : (A"+ calp.getLocation() +")" + location.getLocationName());
 		txtYourLocation.setOpaque(false);
 		txtYourLocation.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 35));
 		txtYourLocation.setEditable(false);
 		txtYourLocation.setColumns(10);
 		txtYourLocation.setBorder(null);
-		txtYourLocation.setBounds(209, 0, 822, 143);
+		txtYourLocation.setBounds(131, 0, 955, 143);
 		panel.add(txtYourLocation);
 		
 		textField_1 = new JTextField();
-		textField_1.setForeground(new Color(128, 0, 0));
+		textField_1.setForeground(new Color(0, 0, 0));
 		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
 		textField_1.setText("↓");
 		textField_1.setOpaque(false);
@@ -94,34 +96,34 @@ public class SummitTicket extends JFrame {
 		textField_1.setEditable(false);
 		textField_1.setColumns(10);
 		textField_1.setBorder(null);
-		textField_1.setBounds(577, 123, 59, 34);
+		textField_1.setBounds(643, 124, 59, 34);
 		panel.add(textField_1);
 		
 		txtYourDestination = new JTextField();
-		txtYourDestination.setText("🚉 Your destination   : (A"+ calp.getDestination() +")" + location.getDestinationName());
+		txtYourDestination.setText("🚉 Your destination station is   : (A"+ calp.getDestination() +")" + location.getDestinationName());
 		txtYourDestination.setOpaque(false);
 		txtYourDestination.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 35));
 		txtYourDestination.setEditable(false);
 		txtYourDestination.setColumns(10);
 		txtYourDestination.setBorder(null);
-		txtYourDestination.setBounds(210, 136, 821, 137);
+		txtYourDestination.setBounds(132, 136, 954, 137);
 		panel.add(txtYourDestination);
 		
 		txtTotalPrice = new JTextField();
-		txtTotalPrice.setForeground(new Color(50, 205, 50));
-		txtTotalPrice.setText(" 💲  Total Price            : " + calp.getPrice() + " Baht.");
+		txtTotalPrice.setForeground(new Color(255, 255, 255));
+		txtTotalPrice.setText(" 💲  Total Price                       : " + calp.getPrice() + " Baht.");
 		txtTotalPrice.setOpaque(false);
-		txtTotalPrice.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 35));
+		txtTotalPrice.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 40));
 		txtTotalPrice.setEditable(false);
 		txtTotalPrice.setColumns(10);
 		txtTotalPrice.setBorder(null);
-		txtTotalPrice.setBounds(209, 255, 822, 148);
+		txtTotalPrice.setBounds(128, 248, 955, 148);
 		panel.add(txtTotalPrice);
 		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");  
 		   LocalDateTime now = LocalDateTime.now();  
 		textField = new JTextField();
 		textField.setForeground(new Color(128, 128, 128));
-		textField.setBounds(219, 389, 255, 34);
+		textField.setBounds(142, 394, 945, 34);
 		panel.add(textField);
 		textField.setText("📅 "+dtf.format(now));
 		textField.setOpaque(false);
@@ -129,6 +131,11 @@ public class SummitTicket extends JFrame {
 		textField.setEditable(false);
 		textField.setColumns(10);
 		textField.setBorder(null);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(50, 205, 50));
+		panel_1.setBounds(1, 282, 1171, 82);
+		panel.add(panel_1);
 		
 		JButton btnBack = new JButton("◀ Back");
 		btnBack.setForeground(new Color(255, 140, 0));
@@ -148,7 +155,7 @@ public class SummitTicket extends JFrame {
 		btnSummit.setForeground(new Color(50, 205, 50));
 		btnSummit.setBackground(new Color(255, 255, 255));
 		btnSummit.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
-		btnSummit.setBounds(994, 613, 180, 105);
+		btnSummit.setBounds(1001, 613, 180, 105);
 		contentPane.add(btnSummit);
 		
 		btnExit = new JButton("🗙 Exit");
@@ -162,5 +169,10 @@ public class SummitTicket extends JFrame {
 		});
 		btnExit.setBounds(10, 613, 206, 105);
 		contentPane.add(btnExit);
+		
+		panel_2 = new JPanel();
+		panel_2.setBackground(new Color(128, 0, 0));
+		panel_2.setBounds(1, 19, 1193, 107);
+		contentPane.add(panel_2);
 	}
 }

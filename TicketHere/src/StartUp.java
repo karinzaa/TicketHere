@@ -52,12 +52,14 @@ public class StartUp {
 		frmTickethere.getContentPane().setLayout(null);
 		
 		txtTickethere = new JTextField();
+		txtTickethere.setForeground(new Color(255, 255, 255));
+		txtTickethere.setBackground(new Color(128, 0, 0));
 		txtTickethere.setEditable(false);
 		txtTickethere.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 99));
 		txtTickethere.setHorizontalAlignment(SwingConstants.CENTER);
 		txtTickethere.setBorder(null);
 		txtTickethere.setText("🎫 TicketHere");
-		txtTickethere.setBounds(125, 79, 964, 227);
+		txtTickethere.setBounds(-1, 79, 1196, 227);
 		frmTickethere.getContentPane().add(txtTickethere);
 		txtTickethere.setColumns(10);
 		
@@ -72,7 +74,7 @@ public class StartUp {
 				current.setVisible(true);
 			}
 		});
-		btnStart.setBounds(123, 326, 966, 336);
+		btnStart.setBounds(244, 405, 712, 257);
 		frmTickethere.getContentPane().add(btnStart);
 	}
 }

@@ -47,6 +47,7 @@ public class CurrentLocation extends JFrame {
 	private JLabel label_8;
 	private JLabel lblRatchaprarop;
 	private JLabel lblPhayaThai;
+	private JPanel panel_1;
 	/**
 	 * Launch the application.
 	 */
@@ -92,6 +93,7 @@ public class CurrentLocation extends JFrame {
 		contentPane.add(btnExit);
 		
 		txtPleaseSelectYour = new JTextField();
+		txtPleaseSelectYour.setForeground(new Color(255, 255, 255));
 		txtPleaseSelectYour.setEditable(false);
 		txtPleaseSelectYour.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 40));
 		txtPleaseSelectYour.setText("\uD83D\uDCCD Please select your board station.");
@@ -102,7 +104,7 @@ public class CurrentLocation extends JFrame {
 		txtPleaseSelectYour.setColumns(10);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(10, 148, 1164, 444);
+		panel.setBounds(10, 148, 1184, 444);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -279,13 +281,13 @@ public class CurrentLocation extends JFrame {
 			}
 		});
 		btnSuvarnabhumi.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnSuvarnabhumi.setBounds(1019, 238, 103, 90);
+		btnSuvarnabhumi.setBounds(1048, 233, 103, 90);
 		panel.add(btnSuvarnabhumi);
 		
 		JLabel lblSuvarnabhumi = new JLabel("\uD83D\uDEE7Suvarnabhumi\r\n");
 		lblSuvarnabhumi.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSuvarnabhumi.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
-		lblSuvarnabhumi.setBounds(971, 333, 172, 26);
+		lblSuvarnabhumi.setBounds(1012, 335, 172, 26);
 		panel.add(lblSuvarnabhumi);
 		
 		JLabel lblLatKbabang = new JLabel("Lat Kbabang");
@@ -297,13 +299,13 @@ public class CurrentLocation extends JFrame {
 		JLabel label_1 = new JLabel(" \u256E");
 		label_1.setForeground(new Color(128, 0, 0));
 		label_1.setFont(new Font("Segoe UI Symbol", Font.BOLD, 73));
-		label_1.setBounds(1030, 112, 70, 72);
+		label_1.setBounds(1055, 112, 70, 72);
 		panel.add(label_1);
 		
 		JLabel label_2 = new JLabel("|");
 		label_2.setForeground(new Color(128, 0, 0));
 		label_2.setFont(new Font("Segoe UI Symbol", Font.BOLD, 70));
-		label_2.setBounds(1064, 168, 21, 76);
+		label_2.setBounds(1089, 168, 21, 76);
 		panel.add(label_2);
 		
 		lblBanThapChang = new JLabel("Ban Thap Chang");
@@ -330,10 +332,10 @@ public class CurrentLocation extends JFrame {
 		lblMakkasan.setBounds(309, 72, 139, 29);
 		panel.add(lblMakkasan);
 		
-		label = new JLabel("_____________________");
+		label = new JLabel("______________________");
 		label.setForeground(new Color(128, 0, 0));
 		label.setFont(new Font("Tahoma", Font.BOLD, 72));
-		label.setBounds(101, 72, 979, 103);
+		label.setBounds(78, 72, 1045, 103);
 		panel.add(label);
 		
 		label_4 = new JLabel("\u2193");
@@ -423,8 +425,13 @@ public class CurrentLocation extends JFrame {
 				destination.setVisible(true);
 			}
 		});
-		btnNext.setBounds(994, 613, 180, 105);
+		btnNext.setBounds(1003, 613, 180, 105);
 		contentPane.add(btnNext);
+		
+		panel_1 = new JPanel();
+		panel_1.setBackground(new Color(128, 0, 0));
+		panel_1.setBounds(2, 20, 1198, 107);
+		contentPane.add(panel_1);
 	}
 	protected JButton getBtnPhayaThai() {
 		return btnPhayaThai;
