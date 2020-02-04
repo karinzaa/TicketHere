@@ -423,6 +423,7 @@ public class DestinationLocation extends CurrentLocation {
 		btnNext.setEnabled(false);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Toolkit.getDefaultToolkit().beep();
 				DestinationLocation.super.setVisible(false);
 				SummitTicket sumTicket = new SummitTicket();
 				sumTicket.setVisible(true);
