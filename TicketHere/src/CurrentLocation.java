@@ -11,6 +11,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import java.awt.Toolkit;
+import javax.swing.JLabel;
+import java.awt.Canvas;
+import javax.swing.JSeparator;
+import javax.swing.JProgressBar;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 public class CurrentLocation extends JFrame {
 
@@ -26,6 +32,21 @@ public class CurrentLocation extends JFrame {
 	private JButton btnLatKbabang;
 	private JButton btnSuvarnabhumi;
 	private JButton btnNext;
+	private JLabel label;
+	private JLabel lblBanThapChang;
+	private JLabel lblHuaMak;
+	private JLabel lblRamkhamhaeng;
+	private JLabel lblMakkasan;
+	private JLabel label_3;
+	private JLabel label_4;
+	private JLabel lblMrtBlueLine;
+	private JLabel lblBl;
+	private JLabel label_5;
+	private JLabel lbln;
+	private JLabel lblBtsShukumvitLine;
+	private JLabel label_8;
+	private JLabel lblRatchaprarop;
+	private JLabel lblPhayaThai;
 	/**
 	 * Launch the application.
 	 */
@@ -46,52 +67,47 @@ public class CurrentLocation extends JFrame {
 	 * Create the frame.
 	 */
 	public CurrentLocation() {
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\Icon.png"));
 		LocationName location = new LocationName();
 		CalculatePrice calp = new CalculatePrice();
 		setTitle("TicketHere");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 860, 430);
+		setBounds(100, 100, 1200, 800);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JButton btnExit = new JButton("\uD83D\uDDD9 Exit");
-		btnExit.setForeground(Color.WHITE);
-		btnExit.setBackground(Color.RED);
+		btnExit.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
+		btnExit.setForeground(Color.RED);
+		btnExit.setBackground(Color.WHITE);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-		btnExit.setBounds(10, 284, 107, 64);
+		btnExit.setBounds(10, 613, 206, 105);
 		contentPane.add(btnExit);
 		
 		txtPleaseSelectYour = new JTextField();
 		txtPleaseSelectYour.setEditable(false);
-		txtPleaseSelectYour.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 24));
-		txtPleaseSelectYour.setText("\uD83D\uDCCD Please select your current location");
+		txtPleaseSelectYour.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 40));
+		txtPleaseSelectYour.setText("\uD83D\uDCCD Please select your board station.");
 		txtPleaseSelectYour.setOpaque(false);
 		txtPleaseSelectYour.setBorder(null);
-		txtPleaseSelectYour.setBounds(10, 0, 439, 55);
+		txtPleaseSelectYour.setBounds(35, 0, 807, 149);
 		contentPane.add(txtPleaseSelectYour);
 		txtPleaseSelectYour.setColumns(10);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(10, 57, 824, 216);
+		panel.setBounds(10, 148, 1164, 444);
 		contentPane.add(panel);
 		panel.setLayout(null);
-		txtYourCurrentLocation = new JTextField();
-		txtYourCurrentLocation.setText("");
-		txtYourCurrentLocation.setOpaque(false);
-		txtYourCurrentLocation.setFont(new Font("Segoe UI", Font.PLAIN, 20));
-		txtYourCurrentLocation.setEditable(false);
-		txtYourCurrentLocation.setColumns(10);
-		txtYourCurrentLocation.setBorder(null);
-		txtYourCurrentLocation.setBounds(131, 292, 453, 49);
-		contentPane.add(txtYourCurrentLocation);
-		btnPhayaThai = new JButton("(A8)Phaya Thai");
+		
+		btnPhayaThai = new JButton("(A8)");
+		btnPhayaThai.setForeground(new Color(128, 0, 0));
 		btnPhayaThai.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnPhayaThai.setBackground(Color.green);
@@ -109,10 +125,11 @@ public class CurrentLocation extends JFrame {
 			}
 		});
 		btnPhayaThai.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnPhayaThai.setBounds(0, 11, 201, 90);
+		btnPhayaThai.setBounds(17, 112, 103, 90);
 		panel.add(btnPhayaThai);
 		
-		btnRatchaprarop = new JButton("(A7)Ratchaprarop");
+		btnRatchaprarop = new JButton("(A7)");
+		btnRatchaprarop.setForeground(new Color(128, 0, 0));
 		btnRatchaprarop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnPhayaThai.setBackground(null);
@@ -130,10 +147,11 @@ public class CurrentLocation extends JFrame {
 			}
 		});
 		btnRatchaprarop.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnRatchaprarop.setBounds(205, 11, 201, 90);
+		btnRatchaprarop.setBounds(172, 112, 103, 90);
 		panel.add(btnRatchaprarop);
 		
-		btnMakkasan = new JButton("(A6)Makkasan");
+		btnMakkasan = new JButton("(A6)");
+		btnMakkasan.setForeground(new Color(128, 0, 0));
 		btnMakkasan.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnPhayaThai.setBackground(null);
@@ -151,10 +169,11 @@ public class CurrentLocation extends JFrame {
 			}
 		});
 		btnMakkasan.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnMakkasan.setBounds(416, 11, 201, 90);
+		btnMakkasan.setBounds(323, 112, 103, 90);
 		panel.add(btnMakkasan);
 		
-		btnRamkhamhaeng = new JButton("(A5)Ramkhamhaeng");
+		btnRamkhamhaeng = new JButton("(A5)");
+		btnRamkhamhaeng.setForeground(new Color(128, 0, 0));
 		btnRamkhamhaeng.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnPhayaThai.setBackground(null);
@@ -172,10 +191,11 @@ public class CurrentLocation extends JFrame {
 			}
 		});
 		btnRamkhamhaeng.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnRamkhamhaeng.setBounds(621, 11, 201, 90);
+		btnRamkhamhaeng.setBounds(475, 112, 103, 90);
 		panel.add(btnRamkhamhaeng);
 		
-		btnHuaMak = new JButton("(A4)Hua Mak");
+		btnHuaMak = new JButton("(A4)");
+		btnHuaMak.setForeground(new Color(128, 0, 0));
 		btnHuaMak.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnPhayaThai.setBackground(null);
@@ -193,10 +213,11 @@ public class CurrentLocation extends JFrame {
 			}
 		});
 		btnHuaMak.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnHuaMak.setBounds(0, 112, 201, 90);
+		btnHuaMak.setBounds(633, 112, 103, 90);
 		panel.add(btnHuaMak);
 		
-		btnBanThapChang = new JButton("(A3)Ban Thap Chang");
+		btnBanThapChang = new JButton("(A3)");
+		btnBanThapChang.setForeground(new Color(128, 0, 0));
 		btnBanThapChang.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnPhayaThai.setBackground(null);
@@ -214,10 +235,11 @@ public class CurrentLocation extends JFrame {
 			}
 		});
 		btnBanThapChang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnBanThapChang.setBounds(205, 112, 201, 90);
+		btnBanThapChang.setBounds(791, 112, 103, 90);
 		panel.add(btnBanThapChang);
 		
-		btnLatKbabang = new JButton("(A2)Lat Kbabang");
+		btnLatKbabang = new JButton("(A2)");
+		btnLatKbabang.setForeground(new Color(128, 0, 0));
 		btnLatKbabang.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnPhayaThai.setBackground(null);
@@ -235,10 +257,11 @@ public class CurrentLocation extends JFrame {
 			}
 		});
 		btnLatKbabang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnLatKbabang.setBounds(416, 112, 201, 90);
+		btnLatKbabang.setBounds(940, 112, 103, 90);
 		panel.add(btnLatKbabang);
 		
-		btnSuvarnabhumi = new JButton("(A1)Suvarnabhumi");
+		btnSuvarnabhumi = new JButton("(A1)");
+		btnSuvarnabhumi.setForeground(new Color(128, 0, 0));
 		btnSuvarnabhumi.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnPhayaThai.setBackground(null);
@@ -256,11 +279,142 @@ public class CurrentLocation extends JFrame {
 			}
 		});
 		btnSuvarnabhumi.setFont(new Font("Segoe UI", Font.PLAIN, 18));
-		btnSuvarnabhumi.setBounds(621, 112, 201, 90);
+		btnSuvarnabhumi.setBounds(1019, 238, 103, 90);
 		panel.add(btnSuvarnabhumi);
 		
+		JLabel lblSuvarnabhumi = new JLabel("\uD83D\uDEE7Suvarnabhumi\r\n");
+		lblSuvarnabhumi.setHorizontalAlignment(SwingConstants.CENTER);
+		lblSuvarnabhumi.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
+		lblSuvarnabhumi.setBounds(971, 333, 172, 26);
+		panel.add(lblSuvarnabhumi);
+		
+		JLabel lblLatKbabang = new JLabel("Lat Kbabang");
+		lblLatKbabang.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLatKbabang.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
+		lblLatKbabang.setBounds(930, 72, 126, 29);
+		panel.add(lblLatKbabang);
+		
+		JLabel label_1 = new JLabel(" \u256E");
+		label_1.setForeground(new Color(128, 0, 0));
+		label_1.setFont(new Font("Segoe UI Symbol", Font.BOLD, 73));
+		label_1.setBounds(1030, 112, 70, 72);
+		panel.add(label_1);
+		
+		JLabel label_2 = new JLabel("|");
+		label_2.setForeground(new Color(128, 0, 0));
+		label_2.setFont(new Font("Segoe UI Symbol", Font.BOLD, 70));
+		label_2.setBounds(1064, 168, 21, 76);
+		panel.add(label_2);
+		
+		lblBanThapChang = new JLabel("Ban Thap Chang");
+		lblBanThapChang.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBanThapChang.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
+		lblBanThapChang.setBounds(764, 212, 172, 29);
+		panel.add(lblBanThapChang);
+		
+		lblHuaMak = new JLabel("Hua Mak");
+		lblHuaMak.setHorizontalAlignment(SwingConstants.CENTER);
+		lblHuaMak.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
+		lblHuaMak.setBounds(596, 72, 172, 29);
+		panel.add(lblHuaMak);
+		
+		lblRamkhamhaeng = new JLabel("Ramkhamhaeng");
+		lblRamkhamhaeng.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRamkhamhaeng.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
+		lblRamkhamhaeng.setBounds(445, 212, 172, 29);
+		panel.add(lblRamkhamhaeng);
+		
+		lblMakkasan = new JLabel("Makkasan");
+		lblMakkasan.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMakkasan.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
+		lblMakkasan.setBounds(309, 72, 139, 29);
+		panel.add(lblMakkasan);
+		
+		label = new JLabel("_____________________");
+		label.setForeground(new Color(128, 0, 0));
+		label.setFont(new Font("Tahoma", Font.BOLD, 72));
+		label.setBounds(101, 72, 979, 103);
+		panel.add(label);
+		
+		label_4 = new JLabel("\u2193");
+		label_4.setForeground(new Color(0, 0, 255));
+		label_4.setHorizontalAlignment(SwingConstants.CENTER);
+		label_4.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
+		label_4.setBounds(323, 172, 103, 63);
+		panel.add(label_4);
+		
+		label_3 = new JLabel("\uD83D\uDE87");
+		label_3.setForeground(new Color(0, 0, 255));
+		label_3.setHorizontalAlignment(SwingConstants.CENTER);
+		label_3.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
+		label_3.setBounds(323, 217, 103, 72);
+		panel.add(label_3);
+		
+		lblBl = new JLabel("(BL21)");
+		lblBl.setForeground(new Color(0, 0, 0));
+		lblBl.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBl.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 18));
+		lblBl.setBounds(323, 277, 103, 29);
+		panel.add(lblBl);
+		
+		lblMrtBlueLine = new JLabel("MRT Blue Line");
+		lblMrtBlueLine.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMrtBlueLine.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 14));
+		lblMrtBlueLine.setBounds(296, 299, 161, 29);
+		panel.add(lblMrtBlueLine);
+		
+		label_5 = new JLabel("\uD83D\uDE87");
+		label_5.setHorizontalAlignment(SwingConstants.CENTER);
+		label_5.setForeground(new Color(0, 204, 0));
+		label_5.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
+		label_5.setBounds(17, 217, 103, 72);
+		panel.add(label_5);
+		
+		lbln = new JLabel("(N2)");
+		lbln.setHorizontalAlignment(SwingConstants.CENTER);
+		lbln.setForeground(Color.BLACK);
+		lbln.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 18));
+		lbln.setBounds(17, 277, 103, 29);
+		panel.add(lbln);
+		
+		lblBtsShukumvitLine = new JLabel("BTS Shukumvit Line");
+		lblBtsShukumvitLine.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBtsShukumvitLine.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 14));
+		lblBtsShukumvitLine.setBounds(-10, 299, 161, 29);
+		panel.add(lblBtsShukumvitLine);
+		
+		label_8 = new JLabel("\u2193");
+		label_8.setHorizontalAlignment(SwingConstants.CENTER);
+		label_8.setForeground(new Color(0, 204, 51));
+		label_8.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
+		label_8.setBounds(17, 172, 103, 63);
+		panel.add(label_8);
+		
+		lblRatchaprarop = new JLabel("Ratchaprarop");
+		lblRatchaprarop.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRatchaprarop.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
+		lblRatchaprarop.setBounds(141, 214, 172, 29);
+		panel.add(lblRatchaprarop);
+		
+		lblPhayaThai = new JLabel("Phaya Thai");
+		lblPhayaThai.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPhayaThai.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
+		lblPhayaThai.setBounds(-10, 74, 172, 29);
+		panel.add(lblPhayaThai);
+		txtYourCurrentLocation = new JTextField();
+		txtYourCurrentLocation.setBounds(27, 339, 719, 105);
+		panel.add(txtYourCurrentLocation);
+		txtYourCurrentLocation.setText("");
+		txtYourCurrentLocation.setOpaque(false);
+		txtYourCurrentLocation.setFont(new Font("Segoe UI", Font.PLAIN, 36));
+		txtYourCurrentLocation.setEditable(false);
+		txtYourCurrentLocation.setColumns(10);
+		txtYourCurrentLocation.setBorder(null);
+		
 		btnNext = new JButton("Next \u25B6");
-		btnNext.setBackground(new Color(0, 255, 0));
+		btnNext.setForeground(new Color(50, 205, 50));
+		btnNext.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
+		btnNext.setBackground(Color.WHITE);
 		btnNext.setEnabled(false);
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -269,7 +423,7 @@ public class CurrentLocation extends JFrame {
 				destination.setVisible(true);
 			}
 		});
-		btnNext.setBounds(727, 284, 107, 64);
+		btnNext.setBounds(994, 613, 180, 105);
 		contentPane.add(btnNext);
 	}
 	protected JButton getBtnPhayaThai() {

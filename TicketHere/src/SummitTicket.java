@@ -49,10 +49,11 @@ public class SummitTicket extends JFrame {
 	 * Create the frame.
 	 */
 	public SummitTicket() {
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\Icon.png"));
 		setTitle("TicketHere");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 860, 464);
+		setBounds(100, 100, 1200, 800);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -61,15 +62,15 @@ public class SummitTicket extends JFrame {
 		txtSummitTicket = new JTextField();
 		txtSummitTicket.setText("🎫 Summit Ticket");
 		txtSummitTicket.setOpaque(false);
-		txtSummitTicket.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 26));
+		txtSummitTicket.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 40));
 		txtSummitTicket.setEditable(false);
 		txtSummitTicket.setColumns(10);
 		txtSummitTicket.setBorder(null);
-		txtSummitTicket.setBounds(31, 0, 237, 65);
+		txtSummitTicket.setBounds(35, 0, 807, 149);
 		contentPane.add(txtSummitTicket);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 68, 824, 240);
+		panel.setBounds(9, 122, 1164, 444);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		LocationName location = new LocationName();
@@ -77,57 +78,62 @@ public class SummitTicket extends JFrame {
 		txtYourLocation = new JTextField();
 		txtYourLocation.setText(" 📍  Your location        : (A"+ calp.getLocation() +")" + location.getLocationName());
 		txtYourLocation.setOpaque(false);
-		txtYourLocation.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 24));
+		txtYourLocation.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 35));
 		txtYourLocation.setEditable(false);
 		txtYourLocation.setColumns(10);
 		txtYourLocation.setBorder(null);
-		txtYourLocation.setBounds(30, 11, 634, 57);
+		txtYourLocation.setBounds(209, 0, 822, 143);
 		panel.add(txtYourLocation);
+		
+		textField_1 = new JTextField();
+		textField_1.setForeground(new Color(128, 0, 0));
+		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1.setText("↓");
+		textField_1.setOpaque(false);
+		textField_1.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 60));
+		textField_1.setEditable(false);
+		textField_1.setColumns(10);
+		textField_1.setBorder(null);
+		textField_1.setBounds(577, 123, 59, 34);
+		panel.add(textField_1);
 		
 		txtYourDestination = new JTextField();
 		txtYourDestination.setText("🚉 Your destination   : (A"+ calp.getDestination() +")" + location.getDestinationName());
 		txtYourDestination.setOpaque(false);
-		txtYourDestination.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 24));
+		txtYourDestination.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 35));
 		txtYourDestination.setEditable(false);
 		txtYourDestination.setColumns(10);
 		txtYourDestination.setBorder(null);
-		txtYourDestination.setBounds(30, 71, 634, 57);
+		txtYourDestination.setBounds(210, 136, 821, 137);
 		panel.add(txtYourDestination);
 		
 		txtTotalPrice = new JTextField();
+		txtTotalPrice.setForeground(new Color(50, 205, 50));
 		txtTotalPrice.setText(" 💲  Total Price            : " + calp.getPrice() + " Baht.");
 		txtTotalPrice.setOpaque(false);
-		txtTotalPrice.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 24));
+		txtTotalPrice.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 35));
 		txtTotalPrice.setEditable(false);
 		txtTotalPrice.setColumns(10);
 		txtTotalPrice.setBorder(null);
-		txtTotalPrice.setBounds(30, 139, 634, 57);
+		txtTotalPrice.setBounds(209, 255, 822, 148);
 		panel.add(txtTotalPrice);
 		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");  
 		   LocalDateTime now = LocalDateTime.now();  
 		textField = new JTextField();
-		textField.setBounds(40, 195, 255, 34);
+		textField.setForeground(new Color(128, 128, 128));
+		textField.setBounds(219, 389, 255, 34);
 		panel.add(textField);
 		textField.setText("📅 "+dtf.format(now));
 		textField.setOpaque(false);
-		textField.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 16));
+		textField.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 20));
 		textField.setEditable(false);
 		textField.setColumns(10);
 		textField.setBorder(null);
 		
-		textField_1 = new JTextField();
-		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setText("↓");
-		textField_1.setOpaque(false);
-		textField_1.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 26));
-		textField_1.setEditable(false);
-		textField_1.setColumns(10);
-		textField_1.setBorder(null);
-		textField_1.setBounds(288, 57, 25, 34);
-		panel.add(textField_1);
-		
 		JButton btnBack = new JButton("◀ Back");
-		btnBack.setBackground(Color.ORANGE);
+		btnBack.setForeground(new Color(255, 140, 0));
+		btnBack.setBackground(new Color(255, 255, 255));
+		btnBack.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				SummitTicket.super.setVisible(false);
@@ -135,23 +141,26 @@ public class SummitTicket extends JFrame {
 				destination.setVisible(true);
 			}
 		});
-		btnBack.setBounds(564, 316, 112, 64);
+		btnBack.setBounds(803, 614, 177, 104);
 		contentPane.add(btnBack);
 		
 		JButton btnSummit = new JButton("☑ Summit");
-		btnSummit.setBackground(Color.GREEN);
-		btnSummit.setBounds(697, 316, 129, 64);
+		btnSummit.setForeground(new Color(50, 205, 50));
+		btnSummit.setBackground(new Color(255, 255, 255));
+		btnSummit.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
+		btnSummit.setBounds(994, 613, 180, 105);
 		contentPane.add(btnSummit);
 		
 		btnExit = new JButton("🗙 Exit");
-		btnExit.setBackground(Color.RED);
-		btnExit.setForeground(Color.WHITE);
+		btnExit.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
+		btnExit.setBackground(new Color(255, 255, 255));
+		btnExit.setForeground(new Color(255, 0, 0));
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-		btnExit.setBounds(31, 316, 107, 64);
+		btnExit.setBounds(10, 613, 206, 105);
 		contentPane.add(btnExit);
 	}
 }
