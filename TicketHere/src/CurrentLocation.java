@@ -71,7 +71,7 @@ public class CurrentLocation extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\Icon.png"));
 		LocationName location = new LocationName();
 		CalculatePrice calp = new CalculatePrice();
-		setTitle("TicketHere");
+		setTitle("🎫 TicketHere");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 800);
 		contentPane = new JPanel();
@@ -121,7 +121,7 @@ public class CurrentLocation extends JFrame {
 				btnNext.setEnabled(true);
 				location.setLocationName("Phaya Thai");
 				calp.setLocation(8);
-				txtYourCurrentLocation.setText("Your current location is (A" + calp.getLocation()+")"+ location.getLocationName());
+				txtYourCurrentLocation.setText("Your board station is (A" + calp.getLocation()+")"+ location.getLocationName());
 			}
 		});
 		btnPhayaThai.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -143,7 +143,7 @@ public class CurrentLocation extends JFrame {
 				btnNext.setEnabled(true);
 				location.setLocationName("Ratchaprarop");
 				calp.setLocation(7);
-				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
+				txtYourCurrentLocation.setText("Your board station is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
 		btnRatchaprarop.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -165,7 +165,7 @@ public class CurrentLocation extends JFrame {
 				btnNext.setEnabled(true);
 				location.setLocationName("Makkasan");
 				calp.setLocation(6);
-				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
+				txtYourCurrentLocation.setText("Your board station is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
 		btnMakkasan.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -187,7 +187,7 @@ public class CurrentLocation extends JFrame {
 				btnNext.setEnabled(true);
 				location.setLocationName("Ramkhamhaeng");
 				calp.setLocation(5);
-				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
+				txtYourCurrentLocation.setText("Your board station is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
 		btnRamkhamhaeng.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -209,7 +209,7 @@ public class CurrentLocation extends JFrame {
 				btnNext.setEnabled(true);
 				location.setLocationName("Hua Mak");
 				calp.setLocation(4);
-				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
+				txtYourCurrentLocation.setText("Your board station is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
 		btnHuaMak.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -231,7 +231,7 @@ public class CurrentLocation extends JFrame {
 				btnNext.setEnabled(true);
 				location.setLocationName("Ban Thap Chang");
 				calp.setLocation(3);
-				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
+				txtYourCurrentLocation.setText("Your board station is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
 		btnBanThapChang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -253,7 +253,7 @@ public class CurrentLocation extends JFrame {
 				btnNext.setEnabled(true);
 				location.setLocationName("Lat Kbabang");
 				calp.setLocation(2);
-				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
+				txtYourCurrentLocation.setText("Your board station is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
 		btnLatKbabang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -275,7 +275,7 @@ public class CurrentLocation extends JFrame {
 				btnNext.setEnabled(true);
 				location.setLocationName("Suvarnabhumi");
 				calp.setLocation(1);
-				txtYourCurrentLocation.setText("Your current location is (A"+ calp.getLocation()+")" + location.getLocationName());
+				txtYourCurrentLocation.setText("Your board station is (A"+ calp.getLocation()+")" + location.getLocationName());
 			}
 		});
 		btnSuvarnabhumi.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -406,7 +406,7 @@ public class CurrentLocation extends JFrame {
 		panel.add(txtYourCurrentLocation);
 		txtYourCurrentLocation.setText("");
 		txtYourCurrentLocation.setOpaque(false);
-		txtYourCurrentLocation.setFont(new Font("Segoe UI", Font.PLAIN, 36));
+		txtYourCurrentLocation.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 36));
 		txtYourCurrentLocation.setEditable(false);
 		txtYourCurrentLocation.setColumns(10);
 		txtYourCurrentLocation.setBorder(null);

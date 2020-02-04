@@ -51,7 +51,7 @@ public class SummitTicket extends JFrame {
 	public SummitTicket() {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\Icon.png"));
-		setTitle("TicketHere");
+		setTitle("🎫 TicketHere");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 800);
 		contentPane = new JPanel();

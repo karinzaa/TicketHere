@@ -46,7 +46,7 @@ public class StartUp {
 		frmTickethere = new JFrame();
 		frmTickethere.setResizable(false);
 		frmTickethere.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\Icon.png"));
-		frmTickethere.setTitle("TicketHere");
+		frmTickethere.setTitle("🎫 TicketHere");
 		frmTickethere.setBounds(100, 100, 1200, 800);
 		frmTickethere.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmTickethere.getContentPane().setLayout(null);
@@ -61,7 +61,7 @@ public class StartUp {
 		frmTickethere.getContentPane().add(txtTickethere);
 		txtTickethere.setColumns(10);
 		
-		JButton btnStart = new JButton("▶ Start");
+		JButton btnStart = new JButton("▶ Start \u25C0");
 		btnStart.setForeground(new Color(50, 205, 50));
 		btnStart.setBackground(new Color(255, 255, 255));
 		btnStart.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));

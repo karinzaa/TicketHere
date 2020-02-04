@@ -70,7 +70,7 @@ public class DestinationLocation extends CurrentLocation {
 	public DestinationLocation() {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\Icon.png"));
-		setTitle("TicketHere");
+		setTitle("🎫 TicketHere");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1200, 800);
 		contentPane = new JPanel();
@@ -123,7 +123,7 @@ public class DestinationLocation extends CurrentLocation {
 				
 				location.setDestinationName("Phaya Thai");
 				calp.setDestination(8);
-				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")"+ location.getDestinationName());
+				txtYourDestinationIs.setText("Your destination station is (A"+calp.getDestination() + ")"+ location.getDestinationName());
 			}
 		});
 		btnPhayathai.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -145,7 +145,7 @@ public class DestinationLocation extends CurrentLocation {
 				btnNext.setEnabled(true);;
 				location.setDestinationName("Ratchaprarop");
 				calp.setDestination(7);
-				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
+				txtYourDestinationIs.setText("Your destination station is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
 		btnRatchaprarop.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -167,7 +167,7 @@ public class DestinationLocation extends CurrentLocation {
 				btnNext.setEnabled(true);;
 				location.setDestinationName("Makkasan");
 				calp.setDestination(6);
-				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
+				txtYourDestinationIs.setText("Your destination station is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
 		btnMakkasan.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -189,7 +189,7 @@ public class DestinationLocation extends CurrentLocation {
 				btnNext.setEnabled(true);;
 				location.setDestinationName("Ramkhamhaeng");
 				calp.setDestination(5);
-				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
+				txtYourDestinationIs.setText("Your destination station is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
 		btnRamkhamhaeng.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -211,7 +211,7 @@ public class DestinationLocation extends CurrentLocation {
 				btnNext.setEnabled(true);;
 				location.setDestinationName("Hua Mak");
 				calp.setDestination(4);
-				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
+				txtYourDestinationIs.setText("Your destination station is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
 		btnHuaMak.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -233,7 +233,7 @@ public class DestinationLocation extends CurrentLocation {
 				btnNext.setEnabled(true);;
 				location.setDestinationName("Ban Thap Chang");
 				calp.setDestination(3);
-				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
+				txtYourDestinationIs.setText("Your destination station is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
 		btnBanThapChang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -255,7 +255,7 @@ public class DestinationLocation extends CurrentLocation {
 				btnNext.setEnabled(true);;
 				location.setDestinationName("Lat Kbabang");
 				calp.setDestination(2);
-				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
+				txtYourDestinationIs.setText("Your destination station is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
 		btnLatKbabang.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -277,7 +277,7 @@ public class DestinationLocation extends CurrentLocation {
 				btnNext.setEnabled(true);;
 				location.setDestinationName("Suvarnabhumi");
 				calp.setDestination(1);
-				txtYourDestinationIs.setText("Your destination is (A"+calp.getDestination() + ")" + location.getDestinationName());
+				txtYourDestinationIs.setText("Your destination station is (A"+calp.getDestination() + ")" + location.getDestinationName());
 			}
 		});
 		btnSuvarnabhumi.setFont(new Font("Segoe UI", Font.PLAIN, 18));
@@ -405,11 +405,11 @@ public class DestinationLocation extends CurrentLocation {
 		panel.add(label_1);
 		
 		txtYourDestinationIs = new JTextField();
-		txtYourDestinationIs.setBounds(26, 339, 719, 105);
+		txtYourDestinationIs.setBounds(26, 339, 913, 105);
 		panel.add(txtYourDestinationIs);
 		txtYourDestinationIs.setText("");
 		txtYourDestinationIs.setOpaque(false);
-		txtYourDestinationIs.setFont(new Font("Segoe UI", Font.PLAIN, 36));
+		txtYourDestinationIs.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 36));
 		txtYourDestinationIs.setEditable(false);
 		txtYourDestinationIs.setColumns(10);
 		txtYourDestinationIs.setBorder(null);
