@@ -157,6 +157,14 @@ public class SummitTicket extends JFrame {
 		btnSummit.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
 		btnSummit.setBounds(1001, 613, 180, 105);
 		contentPane.add(btnSummit);
+		btnSummit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
 		
 		btnExit = new JButton("🗙 Exit");
 		btnExit.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));

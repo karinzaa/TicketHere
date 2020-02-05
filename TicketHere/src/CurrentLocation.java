@@ -37,17 +37,17 @@ public class CurrentLocation extends JFrame {
 	private JLabel lblHuaMak;
 	private JLabel lblRamkhamhaeng;
 	private JLabel lblMakkasan;
-	private JLabel label_3;
-	private JLabel label_4;
-	private JLabel lblMrtBlueLine;
-	private JLabel lblBl;
-	private JLabel label_5;
-	private JLabel lbln;
-	private JLabel lblBtsShukumvitLine;
-	private JLabel label_8;
 	private JLabel lblRatchaprarop;
 	private JLabel lblPhayaThai;
 	private JPanel panel_1;
+	private JLabel label_3;
+	private JLabel label_4;
+	private JLabel label_5;
+	private JLabel label_6;
+	private JLabel label_7;
+	private JLabel label_8;
+	private JLabel label_9;
+	private JLabel label_10;
 	/**
 	 * Launch the application.
 	 */
@@ -338,60 +338,6 @@ public class CurrentLocation extends JFrame {
 		label.setBounds(78, 72, 1045, 103);
 		panel.add(label);
 		
-		label_4 = new JLabel("\u2193");
-		label_4.setForeground(new Color(0, 0, 255));
-		label_4.setHorizontalAlignment(SwingConstants.CENTER);
-		label_4.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
-		label_4.setBounds(323, 172, 103, 63);
-		panel.add(label_4);
-		
-		label_3 = new JLabel("\uD83D\uDE87");
-		label_3.setForeground(new Color(0, 0, 255));
-		label_3.setHorizontalAlignment(SwingConstants.CENTER);
-		label_3.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
-		label_3.setBounds(323, 217, 103, 72);
-		panel.add(label_3);
-		
-		lblBl = new JLabel("(BL21)");
-		lblBl.setForeground(new Color(0, 0, 0));
-		lblBl.setHorizontalAlignment(SwingConstants.CENTER);
-		lblBl.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 18));
-		lblBl.setBounds(323, 277, 103, 29);
-		panel.add(lblBl);
-		
-		lblMrtBlueLine = new JLabel("MRT Blue Line");
-		lblMrtBlueLine.setHorizontalAlignment(SwingConstants.CENTER);
-		lblMrtBlueLine.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 14));
-		lblMrtBlueLine.setBounds(296, 299, 161, 29);
-		panel.add(lblMrtBlueLine);
-		
-		label_5 = new JLabel("\uD83D\uDE87");
-		label_5.setHorizontalAlignment(SwingConstants.CENTER);
-		label_5.setForeground(new Color(0, 204, 0));
-		label_5.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
-		label_5.setBounds(17, 217, 103, 72);
-		panel.add(label_5);
-		
-		lbln = new JLabel("(N2)");
-		lbln.setHorizontalAlignment(SwingConstants.CENTER);
-		lbln.setForeground(Color.BLACK);
-		lbln.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 18));
-		lbln.setBounds(17, 277, 103, 29);
-		panel.add(lbln);
-		
-		lblBtsShukumvitLine = new JLabel("BTS Shukumvit Line");
-		lblBtsShukumvitLine.setHorizontalAlignment(SwingConstants.CENTER);
-		lblBtsShukumvitLine.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 14));
-		lblBtsShukumvitLine.setBounds(-10, 299, 161, 29);
-		panel.add(lblBtsShukumvitLine);
-		
-		label_8 = new JLabel("\u2193");
-		label_8.setHorizontalAlignment(SwingConstants.CENTER);
-		label_8.setForeground(new Color(0, 204, 51));
-		label_8.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
-		label_8.setBounds(17, 172, 103, 63);
-		panel.add(label_8);
-		
 		lblRatchaprarop = new JLabel("Ratchaprarop");
 		lblRatchaprarop.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRatchaprarop.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 21));
@@ -412,6 +358,56 @@ public class CurrentLocation extends JFrame {
 		txtYourCurrentLocation.setEditable(false);
 		txtYourCurrentLocation.setColumns(10);
 		txtYourCurrentLocation.setBorder(null);
+		
+		label_3 = new JLabel("↓");
+		label_3.setHorizontalAlignment(SwingConstants.CENTER);
+		label_3.setForeground(new Color(0, 204, 51));
+		label_3.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
+		label_3.setBounds(17, 167, 103, 63);
+		panel.add(label_3);
+		
+		label_4 = new JLabel("");
+		label_4.setIcon(new ImageIcon("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\BTS_Logo.png"));
+		label_4.setBounds(46, 218, 43, 63);
+		panel.add(label_4);
+		
+		label_5 = new JLabel("(N2)");
+		label_5.setHorizontalAlignment(SwingConstants.CENTER);
+		label_5.setForeground(Color.BLACK);
+		label_5.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 18));
+		label_5.setBounds(17, 274, 103, 29);
+		panel.add(label_5);
+		
+		label_6 = new JLabel("BTS Shukumvit Line");
+		label_6.setHorizontalAlignment(SwingConstants.CENTER);
+		label_6.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 14));
+		label_6.setBounds(-10, 294, 161, 29);
+		panel.add(label_6);
+		
+		label_7 = new JLabel("↓");
+		label_7.setHorizontalAlignment(SwingConstants.CENTER);
+		label_7.setForeground(new Color(0, 51, 102));
+		label_7.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
+		label_7.setBounds(325, 167, 103, 63);
+		panel.add(label_7);
+		
+		label_8 = new JLabel("");
+		label_8.setIcon(new ImageIcon("C:\\Users\\Karinzaa\\Desktop\\1913110449\\TicketHere\\TicketHere\\MRT_logo.png"));
+		label_8.setBounds(346, 218, 60, 61);
+		panel.add(label_8);
+		
+		label_9 = new JLabel("(BL21)");
+		label_9.setHorizontalAlignment(SwingConstants.CENTER);
+		label_9.setForeground(Color.BLACK);
+		label_9.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 18));
+		label_9.setBounds(325, 272, 103, 29);
+		panel.add(label_9);
+		
+		label_10 = new JLabel("MRT Blue Line");
+		label_10.setHorizontalAlignment(SwingConstants.CENTER);
+		label_10.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 14));
+		label_10.setBounds(298, 294, 161, 29);
+		panel.add(label_10);
 		
 		btnNext = new JButton("Next \u25B6");
 		btnNext.setForeground(new Color(50, 205, 50));
