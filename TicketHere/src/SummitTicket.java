@@ -90,7 +90,7 @@ public class SummitTicket extends JFrame {
 		textField_1 = new JTextField();
 		textField_1.setForeground(new Color(0, 0, 0));
 		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setText("↓");
+		textField_1.setText("\u2193");
 		textField_1.setOpaque(false);
 		textField_1.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 60));
 		textField_1.setEditable(false);

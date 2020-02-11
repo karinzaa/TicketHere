@@ -359,11 +359,11 @@ public class CurrentLocation extends JFrame {
 		txtYourCurrentLocation.setColumns(10);
 		txtYourCurrentLocation.setBorder(null);
 		
-		label_3 = new JLabel("↓");
+		label_3 = new JLabel("\u2193");
 		label_3.setHorizontalAlignment(SwingConstants.CENTER);
 		label_3.setForeground(new Color(0, 204, 51));
-		label_3.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
-		label_3.setBounds(17, 167, 103, 63);
+		label_3.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 50));
+		label_3.setBounds(15, 178, 103, 63);
 		panel.add(label_3);
 		
 		label_4 = new JLabel("");
@@ -384,11 +384,11 @@ public class CurrentLocation extends JFrame {
 		label_6.setBounds(-10, 294, 161, 29);
 		panel.add(label_6);
 		
-		label_7 = new JLabel("↓");
+		label_7 = new JLabel("\u2193");
 		label_7.setHorizontalAlignment(SwingConstants.CENTER);
 		label_7.setForeground(new Color(0, 51, 102));
-		label_7.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
-		label_7.setBounds(325, 167, 103, 63);
+		label_7.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 50));
+		label_7.setBounds(323, 178, 103, 63);
 		panel.add(label_7);
 		
 		label_8 = new JLabel("");

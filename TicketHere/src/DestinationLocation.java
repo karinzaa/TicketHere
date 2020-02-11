@@ -321,8 +321,8 @@ public class DestinationLocation extends CurrentLocation {
 		label_10 = new JLabel("\u2193");
 		label_10.setHorizontalAlignment(SwingConstants.CENTER);
 		label_10.setForeground(new Color(0, 204, 51));
-		label_10.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
-		label_10.setBounds(16, 168, 103, 63);
+		label_10.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 50));
+		label_10.setBounds(15, 178, 103, 63);
 		panel.add(label_10);
 		
 		label_11 = new JLabel("BTS Shukumvit Line");
@@ -396,11 +396,11 @@ public class DestinationLocation extends CurrentLocation {
 		label_17.setBounds(345, 219, 60, 61);
 		panel.add(label_17);
 		
-		JLabel label_18 = new JLabel("↓");
+		JLabel label_18 = new JLabel("\u2193");
 		label_18.setHorizontalAlignment(SwingConstants.CENTER);
 		label_18.setForeground(new Color(0, 51, 102));
-		label_18.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 50));
-		label_18.setBounds(324, 168, 103, 63);
+		label_18.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 50));
+		label_18.setBounds(323, 178, 103, 63);
 		panel.add(label_18);
 		
 		JLabel label_9 = new JLabel("");
