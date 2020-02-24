@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
@@ -13,6 +14,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 import java.awt.Color;
@@ -159,11 +163,26 @@ public class SummitTicket extends JFrame {
 		contentPane.add(btnSummit);
 		btnSummit.addActionListener(new ActionListener() {
 			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-				
-			}
+			 @Override
+			   public void actionPerformed(ActionEvent e) {
+			    try {
+			     File desktop = new File(System.getProperty("user.home"), "/Desktop");
+			     PrintStream write = new PrintStream(new File(desktop, "TicketHere.txt"));
+			     write.println("==============================================================");
+			     write.println("[ARL PASS]                          No."+ now );
+			     write.println("--------------------------------------------------------------");
+			     write.println("\n      (A" + calp.getLocation()+ ")  " +location.getLocationName() + "    -->    "+  "(A" + calp.getDestination()+ ")  " + location.getDestinationName());
+			     write.println("\n--------------------------------------------------------------");
+			     write.println("(Time Stamp) "+ dtf.format(now) + "\t      [Price " + calp.getPrice() + " Bath.]");
+			     write.println("==============================================================");
+			     write.close();
+			     JOptionPane.showMessageDialog(null, "Thank you for buying the ticket!", "TicketHere", JOptionPane.INFORMATION_MESSAGE);
+			     System.exit(0);
+			    } catch (FileNotFoundException e1) {
+			     e1.printStackTrace();
+			    }
+			    
+			   }
 		});
 		
 		btnExit = new JButton("🗙 Exit");
