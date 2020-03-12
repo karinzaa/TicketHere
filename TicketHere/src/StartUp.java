@@ -13,7 +13,7 @@ import java.awt.Color;
 
 public class StartUp {
 
-	private JFrame frmTickethere;
+	private  static JFrame frmTickethere;
 	private JTextField txtTickethere;
 
 	/**
@@ -76,5 +76,8 @@ public class StartUp {
 		});
 		btnStart.setBounds(244, 405, 712, 257);
 		frmTickethere.getContentPane().add(btnStart);
+	}
+	public JFrame getMenu() {
+		return frmTickethere;
 	}
 }

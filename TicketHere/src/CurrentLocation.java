@@ -48,6 +48,7 @@ public class CurrentLocation extends JFrame {
 	private JLabel label_8;
 	private JLabel label_9;
 	private JLabel label_10;
+	private StartUp st = new StartUp();
 	/**
 	 * Launch the application.
 	 */
@@ -80,13 +81,16 @@ public class CurrentLocation extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnExit = new JButton("\uD83D\uDDD9 Exit");
+		JButton btnExit = new JButton("🏠 Home");
 		btnExit.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
 		btnExit.setForeground(Color.RED);
 		btnExit.setBackground(Color.WHITE);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
+				dispose();
+				calp.setAmount(1);
+				st.getMenu().setVisible(true);
+				
 			}
 		});
 		btnExit.setBounds(10, 613, 206, 105);

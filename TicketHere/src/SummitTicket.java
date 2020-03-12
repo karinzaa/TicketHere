@@ -33,7 +33,10 @@ public class SummitTicket extends JFrame {
 	private JButton btnExit;
 	private JTextField textField_1;
 	private JPanel panel_2;
-
+	private StartUp st = new StartUp();
+	private int amount = 1;
+	private JButton plusbutton;
+	private JButton minusbutton;
 	/**
 	 * Launch the application.
 	 */
@@ -121,7 +124,7 @@ public class SummitTicket extends JFrame {
 		txtTotalPrice.setEditable(false);
 		txtTotalPrice.setColumns(10);
 		txtTotalPrice.setBorder(null);
-		txtTotalPrice.setBounds(128, 248, 955, 148);
+		txtTotalPrice.setBounds(128, 248, 758, 148);
 		panel.add(txtTotalPrice);
 		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");  
 		   LocalDateTime now = LocalDateTime.now();  
@@ -138,8 +141,51 @@ public class SummitTicket extends JFrame {
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(50, 205, 50));
-		panel_1.setBounds(1, 282, 1171, 82);
+		panel_1.setBounds(1, 277, 1171, 96);
 		panel.add(panel_1);
+		panel_1.setLayout(null);
+		
+		plusbutton = new JButton("+");
+		plusbutton.setForeground(new Color(50, 205, 50));
+		plusbutton.setFont(new Font("Tahoma", Font.BOLD, 40));
+		plusbutton.setBackground(Color.WHITE);
+		plusbutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				amount++;
+				calp.setAmount(amount);
+				txtTotalPrice.setText(" 💲  Total Price                       : " + calp.getPrice() + " Baht.");
+					if(amount == 5) {
+						plusbutton.setEnabled(false);
+					}
+					if(amount > 1) {
+						minusbutton.setEnabled(true);
+					}
+					
+			}
+		});
+		plusbutton.setBounds(1043, 11, 80, 75);
+		panel_1.add(plusbutton);
+		
+		minusbutton = new JButton("-");
+		minusbutton.setBackground(new Color(255, 255, 255));
+		minusbutton.setForeground(Color.RED);
+		minusbutton.setFont(new Font("Tahoma", Font.BOLD, 50));
+		minusbutton.setEnabled(false);
+		minusbutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				amount--;
+				calp.setAmount(amount);
+				txtTotalPrice.setText(" 💲  Total Price                       : " + calp.getPrice() + " Baht.");
+					if(amount == 1) {
+						minusbutton.setEnabled(false);
+					}
+					if(amount < 5) {
+						plusbutton.setEnabled(true);
+					}
+			}
+		});
+		minusbutton.setBounds(917, 11, 80, 75);
+		panel_1.add(minusbutton);
 		
 		JButton btnBack = new JButton("◀ Back");
 		btnBack.setForeground(new Color(255, 140, 0));
@@ -148,6 +194,7 @@ public class SummitTicket extends JFrame {
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				SummitTicket.super.setVisible(false);
+				calp.setAmount(1);
 				DestinationLocation destination = new DestinationLocation();
 				destination.setVisible(true);
 			}
@@ -168,16 +215,20 @@ public class SummitTicket extends JFrame {
 			    try {
 			     File desktop = new File(System.getProperty("user.home"), "/Desktop");
 			     PrintStream write = new PrintStream(new File(desktop, "TicketHere.txt"));
+			     for(int i = 1 ; i <= calp.getAmount() ; i++) {
 			     write.println("==============================================================");
-			     write.println("[ARL PASS]                          No."+ now );
+			     write.println("[ARL PASS]                      Set No."+ now );
 			     write.println("--------------------------------------------------------------");
 			     write.println("\n      (A" + calp.getLocation()+ ")  " +location.getLocationName() + "    -->    "+  "(A" + calp.getDestination()+ ")  " + location.getDestinationName());
 			     write.println("\n--------------------------------------------------------------");
-			     write.println("(Time Stamp) "+ dtf.format(now) + "\t      [Price " + calp.getPrice() + " Bath.]");
-			     write.println("==============================================================");
+			     write.println("(Time Stamp) "+ dtf.format(now) + "\t      [Price " + calp.getOnePrice() + " Bath.]");
+			     write.println("==============================================================\n");
+			     }
 			     write.close();
 			     JOptionPane.showMessageDialog(null, "Thank you for buying the ticket!", "TicketHere", JOptionPane.INFORMATION_MESSAGE);
-			     System.exit(0);
+			     dispose();
+			     calp.setAmount(1);
+			     st.getMenu().setVisible(true);
 			    } catch (FileNotFoundException e1) {
 			     e1.printStackTrace();
 			    }
@@ -185,13 +236,15 @@ public class SummitTicket extends JFrame {
 			   }
 		});
 		
-		btnExit = new JButton("🗙 Exit");
+		btnExit = new JButton("🏠 Home");
 		btnExit.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
 		btnExit.setBackground(new Color(255, 255, 255));
 		btnExit.setForeground(new Color(255, 0, 0));
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
+				dispose();
+				calp.setAmount(1);
+				st.getMenu().setVisible(true);
 			}
 		});
 		btnExit.setBounds(10, 613, 206, 105);

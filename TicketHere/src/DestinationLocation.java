@@ -44,7 +44,8 @@ public class DestinationLocation extends CurrentLocation {
 	private JLabel label_13;
 	private JLabel label_14;
 	private JPanel panel_1;
-	
+	private StartUp st = new StartUp();
+	private CalculatePrice calp = new CalculatePrice();
 	/**
 	 * Launch the application.
 	 */
@@ -75,13 +76,15 @@ public class DestinationLocation extends CurrentLocation {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnExit = new JButton("\uD83D\uDDD9 Exit");
+		JButton btnExit = new JButton("🏠 Home");
 		btnExit.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 25));
 		btnExit.setForeground(Color.RED);
 		btnExit.setBackground(Color.WHITE);
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
+				dispose();
+				calp.setAmount(1);
+				st.getMenu().setVisible(true);
 			}
 		});
 		btnExit.setBounds(10, 613, 206, 105);
@@ -434,6 +437,7 @@ public class DestinationLocation extends CurrentLocation {
 			public void actionPerformed(ActionEvent e) {
 				CurrentLocation current = new CurrentLocation();
 				current.setVisible(true);
+				calp.setAmount(1);
 				DestinationLocation.super.setVisible(false);
 			}
 		});
