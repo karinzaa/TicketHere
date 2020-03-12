@@ -33,11 +33,21 @@ public class CalculatePrice {
 		return 0;
 	}
 	public int getOnePrice() {
-		price = 14;
-		for(int i = location - 1; i > destination;i--) {
-			price += 1;
-		}
-		return price;
+		if(location < destination) {
+			   price = 14;
+			   for(int i = location + 1; i < destination;i++ ) {
+			    price += 1;
+			   }
+			   return price;
+			  }
+			  if(location > destination){
+			   price = 14;
+			   for(int i = location - 1; i > destination;i--) {
+			    price += 1;
+			   }
+			   return price;
+			  }
+			  return 0;
 	}
 	public int getAmount() {
 		return amount;
